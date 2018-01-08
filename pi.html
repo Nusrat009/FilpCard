@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.1/jquery.twbsPagination.js"></script>
+    <script src="pagination.js"></script>
+    <script src="flip.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="flip.css">
+    <title>Flip Card</title>
+</head>
+<body style="background-color: #262626">
+        <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="pi.html">
+                            <h2 style="color:midnightblue;margin-top:0px;">
+                                <b>Flipping</b>
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+                    <nav style="text-align: center;margin-top:60px;">
+                    <ul class="pagination pagination-lg" id="pagi1">
+                        <li class="pag_prev" id="prev">
+                            <a class = "prev_page" href="#" aria-label="Previous">
+                                Previous
+                            </a>
+                        </li>
+                       <li class="num"><a href="#">1</a></li>
+                        <li class="num"><a href="#">2</a></li>
+                        <li class="num"><a href="#">3</a></li>
+                        <li class="num"><a href="#">4</a></li>
+                        <li class="num"><a href="#">5</a></li>
+                        <li class="num"><a href="#">6</a></li>-->
+                        <li class="pag_next" id="nxt">
+                            <a href="#" aria-label="Next">
+                               Next
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+    <div class="container">
+       <div class="row" id="row1" style="display:none">
+           <div class="col-md-12">
+           <div class="col-md-3 col-sm-6 col-xs-12" style="color:blue;">
+                    <div class="card" id="c1">
+                            <div class="front" id="f1" onclick="flip('c1')">
+                                <img src="paris.jpg" class="image" alt="paris">
+                            </div>
+                            <div class="back" id="b1" onclick="flip('c1')">
+                                <p class="txt">
+                                    <h4 style="text-align:center">
+                                        <b>
+                                            <a href="https://en.wikipedia.org/wiki/Paris" target="_blank">Paris</a>
+                                        </b>
+                                    </h4>
+                                    <h5 style="text-align:center">Paris is the capital and most populous city of France.</h5>
+                                </p>
+                            </div>
+               </div>
+               </div>
+
+       <div class="col-md-3 col-sm-6 col-xs-12" style="color:red;">
+                <div class="card" id="c2">
+                        <div class="front" id="f2" onclick="flip('c2')">
+                            <img src="beach.jpg" class="image" alt="beach">
+                        </div>
+                        <div class="back" id="b2" onclick="flip('c2')">
+                                <p class="txt">
+                                        <h4 style="text-align:center">
+                                            <b>
+                                                <a href="https://en.wikipedia.org/wiki/South_Beach,_Durban" target="_blank">South Beach,Durban</a>
+                                            </b>
+                                        </h4>
+                                        <h5 style="text-align:center">South Beach is a residential area in central Durban, KwaZulu-Natal, South Africa.</h5>
+                                    </p>
+                        </div>
+                    </div>
+                </div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12" style="color:green;">
+            <div class="card" id="c3">
+                    <div class="front" id="f4" onclick="flip('c3')">
+                        <img src="greatwall.jpg" class="image" alt="greatwall">
+                    </div>
+                    <div class="back" id="b4" onclick="flip('c3')">
+                        <p class="txt">
+                            <h4 style="text-align:center">
+                                <b>
+                                    <a href="https://en.wikipedia.org/wiki/Great_Wall_of_China" target="_blank">The Great Wall</a>
+                                </b>
+                            </h4>
+                            <h5 style="text-align:center">The wall built in 220–206 BC by Qin Shi Huang, the first Emperor of China.</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-3 col-sm-6 col-xs-12" style="color:blueviolet;">
+                    <div class="card" id="c4">
+                            <div class="front" id="f3" onclick="flip('c4')">
+                                <img src="machu.jpg" class="image" alt="machu">
+                            </div>
+                            <div class="back" id="b3" onclick="flip('c4')">
+                                    <p class="txt">
+                                            <h4 style="text-align:center">
+                                                <b>
+                                                    <a href="https://en.wikipedia.org/wiki/Machu_Picchu" target="_blank">Machu Pichu</a>
+                                                </b>
+                                            </h4>
+                                            <h5 style="text-align:center">Machu Picchu is a 15th-century Inca citadel situated on a mountain ridge 2,430 metres (7,970 ft) above sea level. It is located in the Cusco Region, Urubamba Province, Machupicchu District in Peru,above the Sacred Valley.</h5>
+                                        </p>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+       </div>
+       <div class="row" id="row2" style="display:none">
+            <div class="col-md-12">
+            <div class="col-md-3  col-sm-6 col-xs-12" style="color:red;">
+                     <div class="card" id="c5">
+                             <div class="front" id="f5" onclick="flip('c5')">
+                                 <img src="taj.jpg" class="image" alt="taj">
+                             </div>
+                             <div class="back" id="b5" onclick="flip('c5')">
+                                 <p class="txt">
+                                     <h4 style="text-align:center">
+                                         <b>
+                                             <a href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank">Taj Mahal</a>
+                                         </b>
+                                     </h4>
+                                     <h5 style="text-align:center">The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor, Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife, Mumtaz Mahal.</h5>
+                                 </p>
+                             </div>
+                </div>
+        </div>
+        <div class="col-md-3  col-sm-6 col-xs-12" style="color:green;">
+                 <div class="card" id="c6">
+                         <div class="front" id="f6" onclick="flip('c6')">
+                             <img src="roman.jpg" class="image" alt="roman">
+                         </div>
+                         <div class="back" id="b6" onclick="flip('c6')">
+                                 <p class="txt">
+                                         <h4 style="text-align:center">
+                                             <b>
+                                                 <a href="https://en.wikipedia.org/wiki/Colosseum" target="_blank">The Roman Colosseum</a>
+                                             </b>
+                                         </h4>
+                                         <h5 style="text-align:center">The Colosseum or Coliseum is an oval amphitheatre in the centre of the city of Rome, Italy. </h5>
+                                     </p>
+                         </div>
+                     </div>
+        </div>
+ 
+     <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+             <div class="card" id="c7">
+                     <div class="front" id="f7" onclick="flip('c7')">
+                         <img src="salar.jpg" class="image" alt="salar">
+                     </div>
+                     <div class="back" id="b7" onclick="flip('c7')">
+                         <p class="txt">
+                             <h4 style="text-align:center">
+                                 <b>
+                                     <a href="https://en.wikipedia.org/wiki/Salar_de_Uyuni" target="_blank">Salar_De_Uyuni</a>
+                                 </b>
+                             </h4>
+                             <h5 style="text-align:center">Salar de Uyuni is the world's largest salt flat at 10,582 square kilometers (4,086 sq mi). It is located in the Daniel Campos Province in Potosí in southwest Bolivia, near the crest of the Andes and is at an elevation of 3,656 meters (11,995 ft) above sea level.</h5>
+                         </p>
+                     </div>
+                 </div>
+             </div>
+              <div class="col-md-3 col-sm-6 col-xs-12" style="color:blue;">
+                     <div class="card" id="c8">
+                             <div class="front" id="f8" onclick="flip('c8')">
+                                 <img src="lake.jpg" class="image" alt="lake">
+                             </div>
+                             <div class="back" id="b8" onclick="flip('c8')">
+                                     <p class="txt">
+                                             <h4 style="text-align:center">
+                                                 <b>
+                                                     <a href="https://en.wikipedia.org/wiki/Plitvice_Lakes_National_Park" target="_blank">Plitvice Lakes National Park</a>
+                                                 </b>
+                                             </h4>
+                                             <h5 style="text-align:center">Plitvice Lakes National Park is one of the oldest and the largest national park in Croatia.</h5>
+                                         </p>
+ 
+                             </div>
+                         </div>
+             </div>
+         </div>
+
+    </div>
+        <div class="row" id="row3" style="display:none">
+                <div class="col-md-12">
+                <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                         <div class="card" id="c9">
+                                 <div class="front" id="f9" onclick="flip('c9')">
+                                     <img src="bora.jpg" class="image" alt="bora">
+                                 </div>
+                                 <div class="back" id="b9" onclick="flip('c9')">
+                                     <p class="txt">
+                                         <h4 style="text-align:center">
+                                             <b>
+                                                 <a href="https://en.wikipedia.org/wiki/Bora_Bora" target="_blank">Bora Bora</a>
+                                             </b>
+                                         </h4>
+                                         <h5 style="text-align:center">Bora Bora is a 30.55 km2 (12 sq mi) island group in the Leeward group in the western part of the Society Islands of French Polynesia, an overseas collectivity of France in the Pacific Ocean.</h5>
+                                     </p>
+                                 </div>
+                    </div>
+            </div>
+            <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                     <div class="card" id="c10" style="color:blue;">
+                             <div class="front" id="f10" onclick="flip('c10')">
+                                 <img src="garden.jpg" class="image" alt="garden">
+                             </div>
+                             <div class="back" id="b10" onclick="flip('c10')">
+                                     <p class="txt">
+                                             <h4 style="text-align:center">
+                                                 <b>
+                                                     <a href="https://en.wikipedia.org/wiki/Garden_of_the_Gods" target="_blank">Garden_of_the_Gods</a>
+                                                 </b>
+                                             </h4>
+                                             <h5 style="text-align:center">Garden of the Gods is a public park located in Colorado Springs, Colorado, US. It was designated a National Natural Landmark in 1971.</h5>
+                                         </p>
+                             </div>
+                         </div>
+            </div>
+     
+         <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                 <div class="card" id="c11" >
+                         <div class="front" id="f11" onclick="flip('c11')">
+                             <img src="bisanakandi.jpg" class="image" alt="bisanakandi">
+                         </div>
+                         <div class="back" id="b11" onclick="flip('c11')">
+                             <p class="txt">
+                                 <h4 style="text-align:center">
+                                     <b>
+                                         <a href="https://en.wikipedia.org/wiki/Great_Wall_of_China" target="_blank">BisanaKandi</a>
+                                     </b>
+                                 </h4>
+                                 <h5 style="text-align:center">Bisanakandi is situated at Bangladesh-India border in Sylhet. It is a landscape beauty among gardens and hills. Bichanakandi is a village situated in Rustompur Union under Guainghat Upazilla.</h5>
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+                  <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                         <div class="card" id="c12">
+                                 <div class="front" id="f12" onclick="flip('c12')">
+                                     <img src="coxs.jpg" class="image" alt="coxs">
+                                 </div>
+                                 <div class="back" id="b12" onclick="flip('c12')">
+                                         <p class="txt">
+                                                 <h4 style="text-align:center">
+                                                     <b>
+                                                         <a href="https://en.wikipedia.org/wiki/Machu_Picchu" target="_blank">Coxs Bazar</a>
+                                                     </b>
+                                                 </h4>
+                                                 <h5 style="text-align:center">Coxs bazar is world longest Sea Beach.It is located in Cox's Bazar, Chittagong, Bangladesh.</h5>
+                                             </p>
+     
+                                 </div>
+                             </div>
+                 </div>
+             </div>
+            </div>
+            <div class="row" id="row4" style="display:none">
+                    <div class="col-md-12">
+                    <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                             <div class="card" id="c13">
+                                     <div class="front" id="f13" onclick="flip('c13')">
+                                         <img src="cat.jpg" class="image" alt="Cat">
+                                     </div>
+                                     <div class="back" id="b13" onclick="flip('c13')">
+                                         <p class="txt">
+                                             <h4 style="text-align:center">
+                                                 <b>
+                                                     <a href="https://en.wikipedia.org/wiki/Bora_Bora" target="_blank">CAT</a>
+                                                 </b>
+                                             </h4>
+                                             <h5 style="text-align:center">Domestic animal.</h5>
+                                         </p>
+                                     </div>
+                        </div>
+                </div>
+                <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                         <div class="card" id="c14" style="color:blue;">
+                                 <div class="front" id="f14" onclick="flip('c14')">
+                                     <img src="apple.jpg" class="image" alt="apple">
+                                 </div>
+                                 <div class="back" id="b14" onclick="flip('c14')">
+                                         <p class="txt">
+                                                 <h4 style="text-align:center">
+                                                     <b>
+                                                         <a href="https://en.wikipedia.org/wiki/Garden_of_the_Gods" target="_blank">Apple</a>
+                                                     </b>
+                                                 </h4>
+                                                 <h5 style="text-align:center">Fruit.</h5>
+                                             </p>
+                                 </div>
+                             </div>
+                </div>
+         
+             <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                     <div class="card" id="c15" >
+                             <div class="front" id="f15" onclick="flip('c15')">
+                                 <img src="frog.jpg" class="image" alt="greatwall">
+                             </div>
+                             <div class="back" id="b15" onclick="flip('c15')">
+                                 <p class="txt">
+                                     <h4 style="text-align:center">
+                                         <b>
+                                             <a href="https://en.wikipedia.org/wiki/Great_Wall_of_China" target="_blank">Frog</a>
+                                         </b>
+                                     </h4>
+                                     <h5 style="text-align:center">The wall built in 220–206 BC by Qin Shi Huang, the first Emperor of China.</h5>
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                      <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                             <div class="card" id="c16">
+                                     <div class="front" id="f16" onclick="flip('c16')">
+                                         <img src="elephant.jpg" class="image" alt="machu">
+                                     </div>
+                                     <div class="back" id="b16" onclick="flip('c16')">
+                                             <p class="txt">
+                                                     <h4 style="text-align:center">
+                                                         <b>
+                                                             <a href="https://en.wikipedia.org/wiki/Machu_Picchu" target="_blank">Elephant</a>
+                                                         </b>
+                                                     </h4>
+                                                     <h5 style="text-align:center">Machu Picchu is a 15th-century Inca citadel situated on a mountain ridge 2,430 metres (7,970 ft) above sea level. It is located in the Cusco Region, Urubamba Province, Machupicchu District in Peru,above the Sacred Valley.</h5>
+                                                 </p>
+         
+                                     </div>
+                                 </div>
+                     </div>
+                 </div>
+                </div>
+
+            <div class="row" id="row5" style="display:none">
+                    <div class="col-md-12">
+                    <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                             <div class="card" id="c17">
+                                     <div class="front" id="f17" onclick="flip('c17')">
+                                         <img src="austria.jpg" class="image" alt="austria">
+                                     </div>
+                                     <div class="back" id="b17" onclick="flip('c17')">
+                                         <p class="txt">
+                                             <h4 style="text-align:center">
+                                                 <b>
+                                                     <a href="https://en.wikipedia.org/wiki/Bora_Bora" target="_blank">Bora Bora</a>
+                                                 </b>
+                                             </h4>
+                                             <h5 style="text-align:center">Bora Bora is a 30.55 km2 (12 sq mi) island group in the Leeward group in the western part of the Society Islands of French Polynesia, an overseas collectivity of France in the Pacific Ocean.</h5>
+                                         </p>
+                                     </div>
+                        </div>
+                </div>
+                <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                         <div class="card" id="c18" style="color:blue;">
+                                 <div class="front" id="f18" onclick="flip('c18')">
+                                     <img src="city.jpg" class="image" alt="city">
+                                 </div>
+                                 <div class="back" id="b18" onclick="flip('c18')">
+                                         <p class="txt">
+                                                 <h4 style="text-align:center">
+                                                     <b>
+                                                         <a href="https://en.wikipedia.org/wiki/Garden_of_the_Gods" target="_blank">Garden_of_the_Gods</a>
+                                                     </b>
+                                                 </h4>
+                                                 <h5 style="text-align:center">Garden of the Gods is a public park located in Colorado Springs, Colorado, US. It was designated a National Natural Landmark in 1971.</h5>
+                                             </p>
+                                 </div>
+                             </div>
+                </div>
+         
+             <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                     <div class="card" id="c19" >
+                             <div class="front" id="f19" onclick="flip('c19')">
+                                 <img src="bur.jpg" class="image" alt="bur">
+                             </div>
+                             <div class="back" id="b19" onclick="flip('c19')">
+                                 <p class="txt">
+                                     <h4 style="text-align:center">
+                                         <b>
+                                             <a href="https://en.wikipedia.org/wiki/Great_Wall_of_China" target="_blank">The Great Wall</a>
+                                         </b>
+                                     </h4>
+                                     <h5 style="text-align:center">The wall built in 220–206 BC by Qin Shi Huang, the first Emperor of China.</h5>
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                      <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                             <div class="card" id="c20">
+                                     <div class="front" id="f20" onclick="flip('c20')">
+                                         <img src="turkey.jpg" class="image" alt="machu">
+                                     </div>
+                                     <div class="back" id="b20" onclick="flip('c20')">
+                                             <p class="txt">
+                                                     <h4 style="text-align:center">
+                                                         <b>
+                                                             <a href="https://en.wikipedia.org/wiki/Machu_Picchu" target="_blank">Machu Pichu</a>
+                                                         </b>
+                                                     </h4>
+                                                     <h5 style="text-align:center">Machu Picchu is a 15th-century Inca citadel situated on a mountain ridge 2,430 metres (7,970 ft) above sea level. It is located in the Cusco Region, Urubamba Province, Machupicchu District in Peru,above the Sacred Valley.</h5>
+                                                 </p>
+         
+                                     </div>
+                                 </div>
+                     </div>
+                 </div>
+                </div>
+                <div class="row" id="row6" style="display:none">
+                        <div class="col-md-12">
+                        <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                                 <div class="card" id="c21">
+                                         <div class="front" id="f21" onclick="flip('c21')">
+                                             <img src="dave.jpg" class="image" alt="dave">
+                                         </div>
+                                         <div class="back" id="b21" onclick="flip('c21')">
+                                             <p class="txt">
+                                                 <h4 style="text-align:center">
+                                                     <b>
+                                                         <a href="https://en.wikipedia.org/wiki/Bora_Bora" target="_blank">Bora Bora</a>
+                                                     </b>
+                                                 </h4>
+                                                 <h5 style="text-align:center">Bora Bora is a 30.55 km2 (12 sq mi) island group in the Leeward group in the western part of the Society Islands of French Polynesia, an overseas collectivity of France in the Pacific Ocean.</h5>
+                                             </p>
+                                         </div>
+                            </div>
+                    </div>
+                    <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                             <div class="card" id="c22" style="color:blue;">
+                                     <div class="front" id="f22" onclick="flip('c22')">
+                                         <img src="Makkah.jpg" class="image" alt="garden">
+                                     </div>
+                                     <div class="back" id="b22" onclick="flip('c22')">
+                                             <p class="txt">
+                                                     <h4 style="text-align:center">
+                                                         <b>
+                                                             <a href="https://en.wikipedia.org/wiki/Garden_of_the_Gods" target="_blank">Garden_of_the_Gods</a>
+                                                         </b>
+                                                     </h4>
+                                                     <h5 style="text-align:center">Garden of the Gods is a public park located in Colorado Springs, Colorado, US. It was designated a National Natural Landmark in 1971.</h5>
+                                                 </p>
+                                     </div>
+                                 </div>
+                    </div>
+             
+                 <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                         <div class="card" id="c23" >
+                                 <div class="front" id="f23" onclick="flip('c23')">
+                                     <img src="face.jpg" class="image" alt="greatwall">
+                                 </div>
+                                 <div class="back" id="b23" onclick="flip('c23')">
+                                     <p class="txt">
+                                         <h4 style="text-align:center">
+                                             <b>
+                                                 <a href="https://en.wikipedia.org/wiki/Great_Wall_of_China" target="_blank">The Great Wall</a>
+                                             </b>
+                                         </h4>
+                                         <h5 style="text-align:center">The wall built in 220–206 BC by Qin Shi Huang, the first Emperor of China.</h5>
+                                     </p>
+                                 </div>
+                             </div>
+                         </div>
+                          <div class="col-md-3  col-sm-6 col-xs-12" style="color:blue;">
+                                 <div class="card" id="c24">
+                                         <div class="front" id="f24" onclick="flip('c24')">
+                                             <img src="kutub.jpg" class="image" alt="machu">
+                                         </div>
+                                         <div class="back" id="b24" onclick="flip('c24')">
+                                                 <p class="txt">
+                                                         <h4 style="text-align:center">
+                                                             <b>
+                                                                 <a href="https://en.wikipedia.org/wiki/Machu_Picchu" target="_blank">Machu Pichu</a>
+                                                             </b>
+                                                         </h4>
+                                                         <h5 style="text-align:center">Machu Picchu is a 15th-century Inca citadel situated on a mountain ridge 2,430 metres (7,970 ft) above sea level. It is located in the Cusco Region, Urubamba Province, Machupicchu District in Peru,above the Sacred Valley.</h5>
+                                                     </p>
+             
+                                         </div>
+                                     </div>
+                         </div>
+                     </div>
+                    </div>
+    <footer class="text-center" style="position:fixed;right:0px;bottom:0px;left: 0px; background-color:cadetblue;color:navy">
+            <b><p style="text-align:center">E-mail:nusrat.codesmith@gmail.com</p>
+            <p style="text-align: center">Phone:01682697335</p></b>
+        </footer>
+      </div> 
+</body>
+</html>
